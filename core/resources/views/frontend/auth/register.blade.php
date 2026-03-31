@@ -1,745 +1,837 @@
- <!-- ── BACKGROUND SCENE ────────────────────────────────── -->
-    <div class="bg-scene">
-        <div class="bg-blob b1"></div>
-        <div class="bg-blob b2"></div>
-        <div class="bg-blob b3"></div>
-    </div>
-    <div class="grid-overlay"></div>
-    <div class="scanlines"></div>
-    <div class="veil-overlay"></div>
+<!-- LOGIN CONTAINER -->
+<div class="login-container">
 
-    <!-- Ghost mask icons floating -->
-    <div class="ghost-masks" id="ghostMasks"></div>
+    <div class="login-wrapper">
 
-    <!-- ── CONFESSION TICKER ───────────────────────────────── -->
-    <div class="confession-ticker">
-        <div class="ticker-label">
-            <i class="bi bi-incognito"></i>
-            Live Whispers
-        </div>
-        <div style="overflow:hidden; flex:1; display:flex; align-items:center;">
-            <div class="ticker-track" id="tickerTrack">
-                <span class="ticker-item"><i class="bi bi-chat-square-dots-fill"></i> "I've been pretending to be okay for so long, I forgot what real feels like." <span class="ticker-dot">•</span></span>
-                <span class="ticker-item"><i class="bi bi-chat-square-dots-fill"></i> "Sometimes I disappear just to see if anyone notices." <span class="ticker-dot">•</span></span>
-                <span class="ticker-item"><i class="bi bi-chat-square-dots-fill"></i> "I deleted three years of my work because I was afraid it was never good enough." <span class="ticker-dot">•</span></span>
-                <span class="ticker-item"><i class="bi bi-chat-square-dots-fill"></i> "The version of me people love doesn't actually exist." <span class="ticker-dot">•</span></span>
-                <span class="ticker-item"><i class="bi bi-chat-square-dots-fill"></i> "I forgave everyone except myself." <span class="ticker-dot">•</span></span>
-                <span class="ticker-item"><i class="bi bi-chat-square-dots-fill"></i> "My silence is the loudest thing I've ever said." <span class="ticker-dot">•</span></span>
-                <span class="ticker-item"><i class="bi bi-chat-square-dots-fill"></i> "I keep secrets even from the darkness." <span class="ticker-dot">•</span></span>
-                <!-- duplicate for seamless loop -->
-                <span class="ticker-item"><i class="bi bi-chat-square-dots-fill"></i> "I've been pretending to be okay for so long, I forgot what real feels like." <span class="ticker-dot">•</span></span>
-                <span class="ticker-item"><i class="bi bi-chat-square-dots-fill"></i> "Sometimes I disappear just to see if anyone notices." <span class="ticker-dot">•</span></span>
-                <span class="ticker-item"><i class="bi bi-chat-square-dots-fill"></i> "I deleted three years of my work because I was afraid it was never good enough." <span class="ticker-dot">•</span></span>
-                <span class="ticker-item"><i class="bi bi-chat-square-dots-fill"></i> "The version of me people love doesn't actually exist." <span class="ticker-dot">•</span></span>
-                <span class="ticker-item"><i class="bi bi-chat-square-dots-fill"></i> "I forgave everyone except myself." <span class="ticker-dot">•</span></span>
-                <span class="ticker-item"><i class="bi bi-chat-square-dots-fill"></i> "My silence is the loudest thing I've ever said." <span class="ticker-dot">•</span></span>
-                <span class="ticker-item"><i class="bi bi-chat-square-dots-fill"></i> "I keep secrets even from the darkness." <span class="ticker-dot">•</span></span>
-            </div>
-        </div>
-    </div>
+        <div class="login-card">
 
-    <!-- ════════════════════════════════════════════════════════
-         LOGIN CONTAINER
-    ════════════════════════════════════════════════════════ -->
-    <div class="login-container">
+            <!-- Page Curl Effect -->
+            <div class="page-curl"></div>
 
-        <div class="login-wrapper">
+            <!-- HEADER -->
+            <div class="login-header">
 
-            <div class="login-card">
-
-                <!-- Top glow line -->
-                <div class="card-top-glow"></div>
-
-                <!-- Corner shadow -->
-                <div class="shadow-corner"></div>
-
-                <!-- ── HEADER ───────────────────────────────── -->
-                <div class="login-header">
-
-                    <div class="edition-bar">
-                        <span>
-                            <span class="live-dot"></span>
-                            <i class="bi bi-shield-lock-fill"></i>
-                            100% Anonymous
-                        </span>
-                        <span id="currentDate"></span>
-                        <span>
-                            <i class="bi bi-eye-slash-fill"></i>
-                            Est. 2025
-                        </span>
-                    </div>
-
-                    <div class="header-icon">
-                        <i class="bi bi-incognito"></i>
-                    </div>
-
-                    <div class="masthead-title">
-                        ShadowWhisper
-                    </div>
-
-                    <div class="news-separator">
-                        <div class="sep-line"></div>
-                        <i class="bi bi-diamond-fill"></i>
-                        <i class="bi bi-moon-stars-fill" style="font-size:8px; color: var(--accent-light);"></i>
-                        <i class="bi bi-diamond-fill"></i>
-                        <div class="sep-line"></div>
-                    </div>
-
-                    <span class="brand-tagline">
-                        <i class="bi bi-lock-fill" style="color:var(--accent); font-size:11px;"></i>
-                        Create Your Anonymous Identity
-                        <span class="typewriter-cursor"></span>
+                <div class="edition-bar">
+                    <span>
+                        <i class="bi bi-globe2" style="color: var(--primary);"></i>
+                        Global Writers Hub
                     </span>
 
+                    <span id="currentDate"></span>
+
+                    <span>
+                        Est. 2025
+                    </span>
                 </div>
 
-                <!-- ── BODY ─────────────────────────────────── -->
-                <div class="login-body">
+                <div class="header-icon">
+                    <i class="bi bi-feather"></i>
+                </div>
 
-                    <div class="headline-deco">
-                        <i class="bi bi-person-dash-fill"></i>
-                        Whisper Registration
-                        <i class="bi bi-person-dash-fill"></i>
-                    </div>
+                <div class="masthead-title">
+                    StoryNest
+                </div>
 
-                    <form method="POST" action="{{ route('register') }}" autocomplete="off">
-                        <!-- @csrf (server-side template tag) -->
+                <div class="news-separator">
+                    <div class="sep-line"></div>
+                    <i class="bi bi-diamond-fill"></i>
+                    <i class="bi bi-pen-fill" style="font-size: 8px;"></i>
+                    <i class="bi bi-diamond-fill"></i>
+                    <div class="sep-line"></div>
+                </div>
 
-                        <!-- ── ALIAS ──────────────────────────── -->
-                        <div class="input-group-animated">
-                            <label for="name" class="login-label">
-                                <i class="bi bi-person-bounding-box"></i>
-                                Shadow Alias
-                            </label>
+                <span class="brand-tagline">
+                    Create Your Writer's Account
+                    <span class="typewriter-cursor"></span>
+                </span>
 
-                            <div class="input-icon-wrap">
-                                <i class="bi bi-incognito"></i>
+            </div>
 
-                                <input
-                                    id="name"
-                                    type="text"
-                                    class="form-control login-input"
-                                    name="name"
-                                    placeholder="Choose your anonymous alias"
-                                    required
-                                    autofocus
-                                >
-                            </div>
+            <!-- BODY -->
+            <div class="login-body">
+
+                <div class="headline-deco">
+                    <i class="bi bi-pen-fill"></i>
+                    Writer Registration
+                    <i class="bi bi-pen-fill"></i>
+                </div>
+
+                <!-- ✅ FORM FIX -->
+                <form method="POST" action="{{ route('register') }}" autocomplete="off">
+                    @csrf
+
+                    <!-- NAME -->
+                    <div class="input-group-animated">
+                        <label for="name" class="login-label">
+                            <i class="bi bi-person"></i>
+                            Pen Name
+                        </label>
+
+                        <div class="input-icon-wrap">
+                            <i class="bi bi-person-fill"></i>
+
+                            <input
+                                id="name"
+                                type="text"
+                                class="form-control login-input @error('name') is-invalid @enderror"
+                                name="name"
+                                value="{{ old('name') }}"
+                                placeholder="Enter your pen name"
+                                required
+                                autofocus
+                            >
                         </div>
 
-                        <!-- ── EMAIL ──────────────────────────── -->
-                        <div class="input-group-animated">
-                            <label for="email" class="login-label">
-                                <i class="bi bi-envelope-slash"></i>
-                                Cipher Email
-                            </label>
-
-                            <div class="input-icon-wrap">
-                                <i class="bi bi-envelope-fill"></i>
-
-                                <input
-                                    id="email"
-                                    type="email"
-                                    class="form-control login-input"
-                                    name="email"
-                                    placeholder="your.shadow@whisper.dark"
-                                    required
-                                >
-                            </div>
-                        </div>
-
-                        <!-- ── PASSWORD ───────────────────────── -->
-                        <div class="input-group-animated">
-                            <label for="password" class="login-label">
-                                <i class="bi bi-shield-lock"></i>
-                                Secret Passphrase
-                            </label>
-
-                            <div class="input-icon-wrap">
-                                <i class="bi bi-lock-fill"></i>
-
-                                <input
-                                    id="password"
-                                    type="password"
-                                    class="form-control login-input"
-                                    name="password"
-                                    placeholder="••••••••••••"
-                                    required
-                                >
-
-                                <button
-                                    type="button"
-                                    class="password-toggle"
-                                    onclick="togglePassword('password', this)"
-                                >
-                                    <i class="bi bi-eye-slash"></i>
-                                </button>
-                            </div>
-                        </div>
-
-                        <!-- ── CONFIRM PASSWORD ───────────────── -->
-                        <div class="input-group-animated">
-                            <label for="password-confirm" class="login-label">
-                                <i class="bi bi-shield-check"></i>
-                                Confirm Passphrase
-                            </label>
-
-                            <div class="input-icon-wrap">
-                                <i class="bi bi-lock-fill"></i>
-
-                                <input
-                                    id="password-confirm"
-                                    type="password"
-                                    class="form-control login-input"
-                                    name="password_confirmation"
-                                    placeholder="••••••••••••"
-                                    required
-                                >
-
-                                <button
-                                    type="button"
-                                    class="password-toggle"
-                                    onclick="togglePassword('password-confirm', this)"
-                                >
-                                    <i class="bi bi-eye-slash"></i>
-                                </button>
-                            </div>
-                        </div>
-
-                        <!-- ── DIVIDER ────────────────────────── -->
-                        <div class="divider">
-                            <span>
-                                <i class="bi bi-moon-stars" style="font-size:10px;"></i>
-                                Embrace The Shadows
-                                <i class="bi bi-moon-stars" style="font-size:10px;"></i>
+                        @error('name')
+                            <span class="invalid-feedback">
+                                <strong>{{ $message }}</strong>
                             </span>
-                        </div>
-
-                        <!-- ── BUTTON ──────────────────────────── -->
-                        <div class="btn-wrap">
-                            <button type="submit" class="login-btn" id="submitBtn">
-                                <i class="bi bi-incognito"></i>
-                                Enter The Shadow
-                            </button>
-
-                            <div class="text-center">
-                                <a href="{{ route('login') }}" class="login-link">
-                                    <i class="bi bi-box-arrow-in-right"></i>
-                                    Already a shadow? Sign In
-                                </a>
-                            </div>
-                        </div>
-
-                    </form>
-
-                </div>
-
-                <!-- ── FOOTER ───────────────────────────────── -->
-                <div class="card-footer-stamp">
-                    <div class="footer-text">
-                        ShadowWhisper
-                        <i class="bi bi-heart-fill"></i>
-                        Your Secrets Are Safe With The Dark · 2025
+                        @enderror
                     </div>
-                </div>
 
+                    <!-- EMAIL -->
+                    <div class="input-group-animated">
+                        <label for="email" class="login-label">
+                            <i class="bi bi-envelope"></i>
+                            Email Address
+                        </label>
+
+                        <div class="input-icon-wrap">
+                            <i class="bi bi-envelope-fill"></i>
+
+                            <input
+                                id="email"
+                                type="email"
+                                class="form-control login-input @error('email') is-invalid @enderror"
+                                name="email"
+                                value="{{ old('email') }}"
+                                placeholder="you@storynest.com"
+                                required
+                            >
+                        </div>
+
+                        @error('email')
+                            <span class="invalid-feedback">
+                                <strong>{{ $message }}</strong>
+                            </span>
+                        @enderror
+                    </div>
+
+                    <!-- PASSWORD -->
+                    <div class="input-group-animated">
+                        <label for="password" class="login-label">
+                            <i class="bi bi-shield-lock"></i>
+                            Password
+                        </label>
+
+                        <div class="input-icon-wrap">
+                            <i class="bi bi-lock-fill"></i>
+
+                            <input
+                                id="password"
+                                type="password"
+                                class="form-control login-input @error('password') is-invalid @enderror"
+                                name="password"
+                                placeholder="••••••••"
+                                required
+                            >
+
+                            <button
+                                type="button"
+                                class="password-toggle"
+                                onclick="togglePassword('password', this)"
+                            >
+                                <i class="bi bi-eye-slash"></i>
+                            </button>
+                        </div>
+
+                        @error('password')
+                            <span class="invalid-feedback">
+                                <strong>{{ $message }}</strong>
+                            </span>
+                        @enderror
+                    </div>
+
+                    <!-- CONFIRM PASSWORD -->
+                    <div class="input-group-animated">
+                        <label for="password-confirm" class="login-label">
+                            <i class="bi bi-shield-check"></i>
+                            Confirm Password
+                        </label>
+
+                        <div class="input-icon-wrap">
+                            <i class="bi bi-lock-fill"></i>
+
+                            <input
+                                id="password-confirm"
+                                type="password"
+                                class="form-control login-input"
+                                name="password_confirmation"
+                                placeholder="••••••••"
+                                required
+                            >
+
+                            <button
+                                type="button"
+                                class="password-toggle"
+                                onclick="togglePassword('password-confirm', this)"
+                            >
+                                <i class="bi bi-eye-slash"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- DIVIDER -->
+                    <div class="divider">
+                        <span>
+                            <i class="bi bi-feather" style="font-size:10px;"></i>
+                            Begin Your Story
+                            <i class="bi bi-feather" style="font-size:10px;"></i>
+                        </span>
+                    </div>
+
+                    <!-- BUTTON -->
+                    <div class="btn-wrap">
+                        <button type="submit" class="login-btn">
+                            <i class="bi bi-pen-fill"></i>
+                            Start Writing
+                        </button>
+
+                        <div class="text-center">
+                            <a href="{{ route('login') }}" class="login-link">
+                                <i class="bi bi-box-arrow-in-right"></i>
+                                Already have an account? Sign In
+                            </a>
+                        </div>
+                    </div>
+
+                </form>
+
+            </div>
+
+            <!-- FOOTER -->
+            <div class="card-footer-stamp">
+                <div class="footer-text">
+                    StoryNest
+                    <i class="bi bi-heart-fill"></i>
+                    Crafting Stories Since 2025
+                </div>
             </div>
 
         </div>
 
     </div>
 
-<!-- ── JAVASCRIPT ──────────────────────────────────────── -->
-    <script>
-        /* ── Date ─────────────────────────────────────────── */
-        (function() {
-            const el = document.getElementById('currentDate');
-            if (!el) return;
-            const now  = new Date();
-            const opts = { month: 'short', day: 'numeric', year: 'numeric' };
-            el.textContent = now.toLocaleDateString('en-US', opts);
-        })();
+</div> 
 
-        /* ── Password Toggle ──────────────────────────────── */
-        function togglePassword(id, btn) {
-            const inp  = document.getElementById(id);
+<script>
+        // ===== DATE =====
+        const dateEl = document.getElementById('currentDate');
+        const now = new Date();
+        const options = { weekday: 'short', year: 'numeric', month: 'short', day: 'numeric' };
+        dateEl.textContent = now.toLocaleDateString('en-US', options);
+
+        // ===== PASSWORD TOGGLE =====
+        function togglePassword(inputId, btn) {
+            const input = document.getElementById(inputId);
             const icon = btn.querySelector('i');
-            if (!inp) return;
-            if (inp.type === 'password') {
-                inp.type = 'text';
+            if (input.type === 'password') {
+                input.type = 'text';
                 icon.className = 'bi bi-eye';
-                btn.style.color = 'var(--accent-light)';
             } else {
-                inp.type = 'password';
+                input.type = 'password';
                 icon.className = 'bi bi-eye-slash';
-                btn.style.color = '';
             }
         }
 
-        /* ── Ripple on Button ─────────────────────────────── */
-        document.querySelectorAll('.login-btn').forEach(btn => {
-            btn.addEventListener('click', function(e) {
-                const r  = document.createElement('span');
-                r.className = 'ripple';
-                const rect = btn.getBoundingClientRect();
-                const size = Math.max(rect.width, rect.height);
-                r.style.cssText = `width:${size}px;height:${size}px;left:${e.clientX - rect.left - size/2}px;top:${e.clientY - rect.top - size/2}px;`;
-                btn.appendChild(r);
-                setTimeout(() => r.remove(), 700);
-            });
-        });
+        // ===== INK PARTICLE CANVAS =====
+        const canvas = document.getElementById('inkCanvas');
+        const ctx = canvas.getContext('2d');
 
-        /* ── Floating Mask Icons ──────────────────────────── */
-        const maskIcons   = ['bi-incognito', 'bi-eye-slash-fill', 'bi-moon-stars-fill', 'bi-shield-lock-fill', 'bi-person-dash-fill', 'bi-lock-fill', 'bi-chat-quote-fill'];
-        const ghostWrap   = document.getElementById('ghostMasks');
+        function resizeCanvas() {
+            canvas.width = window.innerWidth;
+            canvas.height = window.innerHeight;
+        }
+        resizeCanvas();
+        window.addEventListener('resize', resizeCanvas);
 
-        function spawnMask() {
-            const el = document.createElement('i');
-            el.className = `bi ${maskIcons[Math.floor(Math.random() * maskIcons.length)]} mask-icon`;
-            el.style.left     = Math.random() * 100 + 'vw';
-            el.style.bottom   = '-30px';
-            el.style.fontSize = (14 + Math.random() * 22) + 'px';
-            const dur = 10 + Math.random() * 14;
-            el.style.animationDuration  = dur + 's';
-            el.style.animationDelay     = '0s';
-            ghostWrap.appendChild(el);
-            setTimeout(() => el.remove(), dur * 1000);
+        class InkParticle {
+            constructor() {
+                this.reset();
+            }
+
+            reset() {
+                this.x = Math.random() * canvas.width;
+                this.y = Math.random() * canvas.height;
+                this.size = Math.random() * 2 + 0.5;
+                this.speedX = (Math.random() - 0.5) * 0.3;
+                this.speedY = (Math.random() - 0.5) * 0.3;
+                this.opacity = Math.random() * 0.15 + 0.02;
+                this.maxOpacity = this.opacity;
+                this.life = Math.random() * 300 + 100;
+                this.maxLife = this.life;
+                this.hue = 45 + Math.random() * 10;
+            }
+
+            update() {
+                this.x += this.speedX;
+                this.y += this.speedY;
+                this.life--;
+
+                const lifeRatio = this.life / this.maxLife;
+                this.opacity = this.maxOpacity * Math.sin(lifeRatio * Math.PI);
+
+                if (this.life <= 0 || this.x < 0 || this.x > canvas.width || this.y < 0 || this.y > canvas.height) {
+                    this.reset();
+                }
+            }
+
+            draw() {
+                ctx.beginPath();
+                ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
+                ctx.fillStyle = `hsla(${this.hue}, 90%, 55%, ${this.opacity})`;
+                ctx.fill();
+            }
         }
 
-        setInterval(spawnMask, 1400);
-        for (let i = 0; i < 5; i++) setTimeout(spawnMask, i * 700);
-
-        /* ── Floating Particles ───────────────────────────── */
-        const chars = ['✦','·','∙','◦','°','⊹','✧'];
-        for (let i = 0; i < 18; i++) {
-            const p = document.createElement('span');
-            p.className = 'particle';
-            p.textContent = chars[Math.floor(Math.random() * chars.length)];
-            p.style.left     = Math.random() * 100 + 'vw';
-            p.style.bottom   = '-20px';
-            p.style.fontSize = (8 + Math.random() * 10) + 'px';
-            const dur = 12 + Math.random() * 16;
-            p.style.animationDuration = dur + 's';
-            p.style.animationDelay    = (Math.random() * dur) + 's';
-            document.querySelector('.bg-scene').appendChild(p);
+        const particles = [];
+        for (let i = 0; i < 60; i++) {
+            particles.push(new InkParticle());
         }
 
-        /* ── Input focus glow sync ────────────────────────── */
-        document.querySelectorAll('.login-input').forEach(inp => {
-            inp.addEventListener('focus', () => {
-                const iconEl = inp.parentElement.querySelector('i:first-child');
-                if (iconEl) iconEl.style.color = 'var(--accent-light)';
+        function animateParticles() {
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+            particles.forEach(p => {
+                p.update();
+                p.draw();
             });
-            inp.addEventListener('blur', () => {
-                const iconEl = inp.parentElement.querySelector('i:first-child');
-                if (iconEl) iconEl.style.color = '';
-            });
+            requestAnimationFrame(animateParticles);
+        }
+        animateParticles();
+
+        // ===== INK DROP ON MOUSE MOVE =====
+        let lastInkTime = 0;
+        document.addEventListener('mousemove', (e) => {
+            const now = Date.now();
+            if (now - lastInkTime < 80) return;
+            lastInkTime = now;
+
+            const drop = document.createElement('div');
+            drop.className = 'ink-drop';
+            drop.style.left = e.clientX + 'px';
+            drop.style.top = e.clientY + 'px';
+            document.body.appendChild(drop);
+
+            setTimeout(() => drop.remove(), 1000);
         });
+
+        // ===== STARDUST AROUND CARD =====
+        const card = document.querySelector('.login-card');
+        function createStardust() {
+            const rect = card.getBoundingClientRect();
+            const dust = document.createElement('div');
+            dust.className = 'stardust';
+
+            const side = Math.floor(Math.random() * 4);
+            let x, y;
+            switch(side) {
+                case 0: x = rect.left + Math.random() * rect.width; y = rect.top - 10; break;
+                case 1: x = rect.right + 10; y = rect.top + Math.random() * rect.height; break;
+                case 2: x = rect.left + Math.random() * rect.width; y = rect.bottom + 10; break;
+                case 3: x = rect.left - 10; y = rect.top + Math.random() * rect.height; break;
+            }
+
+            dust.style.left = x + 'px';
+            dust.style.top = y + 'px';
+            dust.style.animationDuration = (2 + Math.random() * 3) + 's';
+            document.body.appendChild(dust);
+
+            setTimeout(() => dust.remove(), 5000);
+        }
+
+        setInterval(createStardust, 300);
+
+        // ===== TYPEWRITER EFFECT =====
+        const tagline = document.querySelector('.brand-tagline');
+        const cursor = document.querySelector('.typewriter-cursor');
+        const text = 'Create Your Writer\'s Account';
+        tagline.textContent = '';
+        tagline.appendChild(cursor);
+
+        let charIndex = 0;
+        function typeWriter() {
+            if (charIndex < text.length) {
+                tagline.insertBefore(document.createTextNode(text[charIndex]), cursor);
+                charIndex++;
+                setTimeout(typeWriter, 60 + Math.random() * 40);
+            }
+        }
+        setTimeout(typeWriter, 1200);
     </script>
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=Lora:ital,wght@0,400;0,600;1,400&family=Special+Elite&display=swap" rel="stylesheet">
     <style>
-        /* ─── VARIABLES ─────────────────────────────────────── */
-        :root {
-            --bg:           #0D0D0D;
-            --bg-card:      #111118;
-            --bg-card2:     #15151f;
-            --accent:       #4B0082;
-            --accent-light: #6a00b8;
-            --accent-glow:  rgba(75,0,130,.45);
-            --accent-soft:  rgba(75,0,130,.15);
-            --border:       rgba(75,0,130,.35);
-            --border-dim:   rgba(255,255,255,.06);
-            --text:         #e8e8f0;
-            --text-muted:   #7a7a9a;
-            --text-dim:     #4a4a6a;
-            --danger:       #c0392b;
-            --success:      #1a7a4a;
-            --white:        #ffffff;
-            --radius:       14px;
-            --radius-sm:    8px;
+        /* ===== RESET & BASE ===== */
+        *, *::before, *::after {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
         }
 
-        /* ─── RESET ──────────────────────────────────────────── */
-        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+        :root {
+            --bg: #000000;
+            --primary: #facc15;
+            --primary-dim: rgba(250, 204, 21, 0.15);
+            --primary-glow: rgba(250, 204, 21, 0.4);
+            --text: #ffffff;
+            --text-muted: rgba(255, 255, 255, 0.6);
+            --card-bg: rgba(10, 10, 10, 0.85);
+            --card-border: rgba(250, 204, 21, 0.25);
+            --input-bg: rgba(255, 255, 255, 0.05);
+            --input-border: rgba(250, 204, 21, 0.2);
+        }
 
         body {
+            font-family: 'Lora', serif;
             background: var(--bg);
-            font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
             color: var(--text);
             min-height: 100vh;
             overflow-x: hidden;
             display: flex;
             align-items: center;
             justify-content: center;
+            padding: 40px 20px;
             position: relative;
         }
 
-        /* ─── ANIMATED BACKGROUND ────────────────────────────── */
-        .bg-scene {
+        /* ===== BACKGROUND CANVAS ===== */
+        body::before {
+            content: '';
             position: fixed;
-            inset: 0;
+            top: 0; left: 0;
+            width: 100%; height: 100%;
+            background:
+                radial-gradient(ellipse at 20% 50%, rgba(250,204,21,0.03) 0%, transparent 60%),
+                radial-gradient(ellipse at 80% 20%, rgba(250,204,21,0.04) 0%, transparent 50%),
+                radial-gradient(ellipse at 50% 80%, rgba(250,204,21,0.02) 0%, transparent 60%);
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        /* ===== INK PARTICLE CANVAS ===== */
+        #inkCanvas {
+            position: fixed;
+            top: 0; left: 0;
+            width: 100%; height: 100%;
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        /* ===== FLOATING STORY SNIPPETS ===== */
+        .floating-snippet {
+            position: fixed;
+            font-family: 'Special Elite', cursive;
+            font-size: 13px;
+            color: rgba(250, 204, 21, 0.12);
+            white-space: nowrap;
+            pointer-events: none;
+            z-index: 1;
+            text-shadow: 0 0 20px rgba(250, 204, 21, 0.05);
+            animation: floatSnippet 25s linear infinite;
+            padding: 8px 16px;
+            border-left: 2px solid rgba(250, 204, 21, 0.08);
+        }
+
+        .floating-snippet:nth-child(1) {
+            top: 8%;
+            animation-duration: 28s;
+            animation-delay: 0s;
+            font-size: 12px;
+        }
+        .floating-snippet:nth-child(2) {
+            top: 22%;
+            animation-duration: 32s;
+            animation-delay: -5s;
+            font-size: 14px;
+        }
+        .floating-snippet:nth-child(3) {
+            top: 38%;
+            animation-duration: 26s;
+            animation-delay: -10s;
+            font-size: 11px;
+        }
+        .floating-snippet:nth-child(4) {
+            top: 55%;
+            animation-duration: 30s;
+            animation-delay: -15s;
+            font-size: 13px;
+        }
+        .floating-snippet:nth-child(5) {
+            top: 70%;
+            animation-duration: 34s;
+            animation-delay: -8s;
+            font-size: 12px;
+        }
+        .floating-snippet:nth-child(6) {
+            top: 85%;
+            animation-duration: 27s;
+            animation-delay: -20s;
+            font-size: 14px;
+        }
+
+        @keyframes floatSnippet {
+            0% {
+                transform: translateX(110vw) rotate(0deg);
+                opacity: 0;
+            }
+            5% { opacity: 1; }
+            90% { opacity: 1; }
+            100% {
+                transform: translateX(-110vw) rotate(-2deg);
+                opacity: 0;
+            }
+        }
+
+        /* ===== FLOATING QUILL FEATHERS ===== */
+        .floating-quill {
+            position: fixed;
+            pointer-events: none;
+            z-index: 1;
+            font-size: 20px;
+            color: rgba(250, 204, 21, 0.08);
+            animation: quillFloat 20s ease-in-out infinite;
+        }
+
+        .floating-quill:nth-child(7)  { top: 10%; left: 5%;  animation-duration: 18s; animation-delay: 0s; }
+        .floating-quill:nth-child(8)  { top: 30%; left: 90%; animation-duration: 22s; animation-delay: -4s; }
+        .floating-quill:nth-child(9)  { top: 60%; left: 15%; animation-duration: 20s; animation-delay: -8s; }
+        .floating-quill:nth-child(10) { top: 80%; left: 85%; animation-duration: 24s; animation-delay: -12s; }
+        .floating-quill:nth-child(11) { top: 45%; left: 95%; animation-duration: 19s; animation-delay: -6s; }
+
+        @keyframes quillFloat {
+            0%, 100% {
+                transform: translateY(0) rotate(0deg) scale(1);
+                opacity: 0.06;
+            }
+            25% {
+                transform: translateY(-30px) rotate(15deg) scale(1.1);
+                opacity: 0.12;
+            }
+            50% {
+                transform: translateY(-10px) rotate(-10deg) scale(0.95);
+                opacity: 0.08;
+            }
+            75% {
+                transform: translateY(-40px) rotate(8deg) scale(1.05);
+                opacity: 0.1;
+            }
+        }
+
+        /* ===== WRITING LINE ANIMATION (Background) ===== */
+        .writing-lines {
+            position: fixed;
+            top: 0; left: 0;
+            width: 100%; height: 100%;
+            pointer-events: none;
             z-index: 0;
             overflow: hidden;
-            pointer-events: none;
         }
 
-        /* Radial glow blobs */
-        .bg-blob {
+        .writing-line {
             position: absolute;
-            border-radius: 50%;
-            filter: blur(80px);
-            opacity: .18;
-            animation: blobFloat 14s ease-in-out infinite alternate;
-        }
-        .bg-blob.b1 { width: 520px; height: 520px; background: var(--accent); top: -120px; left: -120px; animation-delay: 0s; }
-        .bg-blob.b2 { width: 380px; height: 380px; background: #2d0057; bottom: -80px; right: -60px; animation-delay: -5s; }
-        .bg-blob.b3 { width: 260px; height: 260px; background: #1a0040; top: 40%; left: 55%; animation-delay: -9s; }
-
-        @keyframes blobFloat {
-            0%   { transform: translate(0,0) scale(1); }
-            100% { transform: translate(30px,20px) scale(1.08); }
+            height: 1px;
+            background: linear-gradient(90deg, transparent, rgba(250,204,21,0.06), transparent);
+            animation: writeLine 8s ease-in-out infinite;
         }
 
-        /* Floating whisper particles */
-        .particle {
-            position: absolute;
-            color: var(--accent-light);
-            opacity: 0;
-            font-size: 12px;
-            animation: particleRise linear infinite;
+        .writing-line:nth-child(1) { top: 15%; width: 60%; left: 20%; animation-delay: 0s; }
+        .writing-line:nth-child(2) { top: 25%; width: 50%; left: 25%; animation-delay: 1s; }
+        .writing-line:nth-child(3) { top: 35%; width: 70%; left: 15%; animation-delay: 2s; }
+        .writing-line:nth-child(4) { top: 50%; width: 45%; left: 30%; animation-delay: 3s; }
+        .writing-line:nth-child(5) { top: 65%; width: 55%; left: 22%; animation-delay: 4s; }
+        .writing-line:nth-child(6) { top: 75%; width: 40%; left: 35%; animation-delay: 5s; }
+        .writing-line:nth-child(7) { top: 88%; width: 65%; left: 18%; animation-delay: 6s; }
+
+        @keyframes writeLine {
+            0% { transform: scaleX(0); transform-origin: left; opacity: 0; }
+            30% { transform: scaleX(1); transform-origin: left; opacity: 1; }
+            50% { transform: scaleX(1); transform-origin: left; opacity: 0.5; }
+            70% { transform: scaleX(0); transform-origin: right; opacity: 0; }
+            100% { transform: scaleX(0); transform-origin: right; opacity: 0; }
         }
 
-        @keyframes particleRise {
-            0%   { opacity: 0;   transform: translateY(0)     rotate(0deg);   }
-            15%  { opacity: .55; }
-            85%  { opacity: .3;  }
-            100% { opacity: 0;   transform: translateY(-90vh) rotate(360deg); }
-        }
-
-        /* Scanline overlay */
-        .scanlines {
-            position: fixed;
-            inset: 0;
-            background: repeating-linear-gradient(
-                to bottom,
-                transparent 0px,
-                transparent 3px,
-                rgba(0,0,0,.07) 3px,
-                rgba(0,0,0,.07) 4px
-            );
-            z-index: 1;
-            pointer-events: none;
-        }
-
-        /* Grid noise */
-        .grid-overlay {
-            position: fixed;
-            inset: 0;
-            background-image:
-                linear-gradient(rgba(75,0,130,.04) 1px, transparent 1px),
-                linear-gradient(90deg, rgba(75,0,130,.04) 1px, transparent 1px);
-            background-size: 40px 40px;
-            z-index: 0;
-            pointer-events: none;
-        }
-
-        /* Floating confession words */
-        .whisper-word {
-            position: absolute;
-            font-size: 11px;
-            letter-spacing: 2px;
-            text-transform: uppercase;
-            color: rgba(75,0,130,.4);
-            white-space: nowrap;
-            animation: whisperDrift linear infinite;
-            pointer-events: none;
-        }
-
-        @keyframes whisperDrift {
-            0%   { opacity: 0; transform: translateX(-30px); }
-            20%  { opacity: 1; }
-            80%  { opacity: .6; }
-            100% { opacity: 0; transform: translateX(60px); }
-        }
-
-        /* ─── MAIN CONTAINER ─────────────────────────────────── */
+        /* ===== LOGIN CONTAINER ===== */
         .login-container {
             position: relative;
             z-index: 10;
             width: 100%;
-            min-height: 100vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            padding: 30px 16px;
+            max-width: 480px;
+            perspective: 1200px;
         }
 
         .login-wrapper {
-            width: 100%;
-            max-width: 480px;
-        }
-
-        /* ─── CARD ───────────────────────────────────────────── */
-        .login-card {
-            background: var(--bg-card);
-            border: 1px solid var(--border);
-            border-radius: var(--radius);
-            overflow: hidden;
-            position: relative;
-            box-shadow:
-                0 0 0 1px rgba(75,0,130,.1),
-                0 8px 40px rgba(0,0,0,.7),
-                0 0 80px rgba(75,0,130,.12),
-                inset 0 1px 0 rgba(255,255,255,.04);
-            animation: cardReveal .7s cubic-bezier(.22,1,.36,1) both;
+            animation: cardReveal 1.2s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+            opacity: 0;
         }
 
         @keyframes cardReveal {
-            from { opacity: 0; transform: translateY(28px) scale(.97); }
-            to   { opacity: 1; transform: translateY(0)    scale(1);   }
+            0% {
+                opacity: 0;
+                transform: translateY(40px) rotateX(8deg) scale(0.95);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0) rotateX(0) scale(1);
+            }
         }
 
-        /* Inner glow border animation */
+        /* ===== CARD ===== */
+        .login-card {
+            background: var(--card-bg);
+            border: 1px solid var(--card-border);
+            border-radius: 16px;
+            overflow: hidden;
+            backdrop-filter: blur(20px);
+            box-shadow:
+                0 0 60px rgba(250, 204, 21, 0.05),
+                0 25px 60px rgba(0, 0, 0, 0.6),
+                inset 0 1px 0 rgba(250, 204, 21, 0.1);
+            position: relative;
+        }
+
         .login-card::before {
             content: '';
             position: absolute;
-            inset: 0;
-            border-radius: var(--radius);
-            padding: 1px;
-            background: linear-gradient(135deg, rgba(75,0,130,.6), transparent 50%, rgba(75,0,130,.3));
-            -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
-            -webkit-mask-composite: xor;
-            mask-composite: exclude;
-            pointer-events: none;
-            opacity: .7;
+            top: -1px; left: -1px;
+            right: -1px; bottom: -1px;
+            border-radius: 17px;
+            background: linear-gradient(135deg, rgba(250,204,21,0.3), transparent 40%, transparent 60%, rgba(250,204,21,0.15));
+            z-index: -1;
+            opacity: 0;
+            animation: borderGlow 4s ease-in-out infinite;
         }
 
-        /* Corner shadow effect */
-        .shadow-corner {
-            position: absolute;
-            width: 100px;
-            height: 100px;
-            bottom: 0;
-            right: 0;
-            background: linear-gradient(135deg, transparent 50%, rgba(75,0,130,.18) 100%);
-            border-radius: 0 0 var(--radius) 0;
-            pointer-events: none;
+        @keyframes borderGlow {
+            0%, 100% { opacity: 0.3; }
+            50% { opacity: 0.7; }
         }
 
-        /* Mask animation top */
-        .card-top-glow {
-            position: absolute;
-            top: 0; left: 0; right: 0;
-            height: 2px;
-            background: linear-gradient(90deg, transparent, var(--accent), var(--accent-light), var(--accent), transparent);
-            background-size: 200% 100%;
-            animation: glowSlide 3s linear infinite;
-        }
-
-        @keyframes glowSlide {
-            0%   { background-position: 200% 0; }
-            100% { background-position: -200% 0; }
-        }
-
-        /* ─── HEADER ─────────────────────────────────────────── */
+        /* ===== HEADER ===== */
         .login-header {
-            padding: 30px 32px 20px;
+            padding: 32px 32px 20px;
             text-align: center;
-            border-bottom: 1px solid var(--border-dim);
             position: relative;
-            background: linear-gradient(180deg, rgba(75,0,130,.08) 0%, transparent 100%);
+            background: linear-gradient(180deg, rgba(250,204,21,0.06) 0%, transparent 100%);
+            border-bottom: 1px solid rgba(250,204,21,0.1);
         }
 
-        /* Edition bar */
         .edition-bar {
             display: flex;
-            align-items: center;
             justify-content: space-between;
+            align-items: center;
             font-size: 10px;
             letter-spacing: 1.5px;
             text-transform: uppercase;
-            color: var(--text-dim);
-            border: 1px solid var(--border-dim);
-            border-radius: 30px;
-            padding: 5px 14px;
+            color: var(--text-muted);
             margin-bottom: 20px;
-            background: rgba(75,0,130,.06);
+            padding-bottom: 12px;
+            border-bottom: 1px solid rgba(250,204,21,0.08);
+            font-family: 'Lora', serif;
         }
 
-        .edition-bar span { display: flex; align-items: center; gap: 5px; }
-        .edition-bar i { color: var(--accent-light); }
-
-        /* Pulse dot */
-        .live-dot {
-            width: 6px; height: 6px;
-            border-radius: 50%;
-            background: var(--accent-light);
-            display: inline-block;
-            margin-right: 4px;
-            animation: pulseDot 1.8s ease-in-out infinite;
+        .edition-bar span {
+            display: flex;
+            align-items: center;
+            gap: 4px;
         }
 
-        @keyframes pulseDot {
-            0%, 100% { opacity: 1; transform: scale(1); box-shadow: 0 0 0 0 rgba(106,0,184,.5); }
-            50%       { opacity: .7; transform: scale(1.3); box-shadow: 0 0 0 5px rgba(106,0,184,0); }
+        .edition-bar i {
+            color: var(--primary);
+            font-size: 11px;
         }
 
-        /* Header icon */
         .header-icon {
-            width: 68px; height: 68px;
-            border-radius: 50%;
-            border: 1.5px solid var(--border);
-            background: radial-gradient(circle at 40% 35%, rgba(75,0,130,.35) 0%, rgba(13,13,13,.9) 70%);
-            display: flex; align-items: center; justify-content: center;
+            width: 70px;
+            height: 70px;
             margin: 0 auto 16px;
-            font-size: 28px;
-            color: var(--accent-light);
+            border-radius: 50%;
+            background: linear-gradient(135deg, var(--primary), #d4a90a);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 30px;
+            color: #000;
+            box-shadow:
+                0 0 30px rgba(250, 204, 21, 0.3),
+                0 0 60px rgba(250, 204, 21, 0.1);
+            animation: iconPulse 3s ease-in-out infinite;
             position: relative;
-            animation: iconPulse 4s ease-in-out infinite;
-            box-shadow: 0 0 24px rgba(75,0,130,.25), inset 0 1px 0 rgba(255,255,255,.06);
         }
 
-        @keyframes iconPulse {
-            0%, 100% { box-shadow: 0 0 24px rgba(75,0,130,.25), inset 0 1px 0 rgba(255,255,255,.06); }
-            50%       { box-shadow: 0 0 40px rgba(75,0,130,.5),  inset 0 1px 0 rgba(255,255,255,.06); }
-        }
-
-        /* Orbiting ring */
         .header-icon::after {
             content: '';
             position: absolute;
-            inset: -8px;
+            width: 100%;
+            height: 100%;
             border-radius: 50%;
-            border: 1px dashed rgba(75,0,130,.35);
-            animation: orbitSpin 10s linear infinite;
+            border: 2px solid rgba(250,204,21,0.2);
+            animation: iconRing 3s ease-in-out infinite;
         }
 
-        @keyframes orbitSpin {
-            from { transform: rotate(0deg); }
-            to   { transform: rotate(360deg); }
+        @keyframes iconPulse {
+            0%, 100% { transform: scale(1); box-shadow: 0 0 30px rgba(250,204,21,0.3); }
+            50% { transform: scale(1.05); box-shadow: 0 0 45px rgba(250,204,21,0.5); }
         }
 
-        /* Masthead title */
+        @keyframes iconRing {
+            0%, 100% { transform: scale(1); opacity: 0.5; }
+            50% { transform: scale(1.3); opacity: 0; }
+        }
+
         .masthead-title {
+            font-family: 'Playfair Display', serif;
             font-size: 32px;
-            font-weight: 800;
-            letter-spacing: 4px;
+            font-weight: 900;
+            color: var(--primary);
+            letter-spacing: 3px;
             text-transform: uppercase;
-            background: linear-gradient(135deg, #c084fc, #a855f7, #7c3aed, #4B0082);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-            line-height: 1;
-            margin-bottom: 10px;
-            position: relative;
+            text-shadow: 0 0 30px rgba(250,204,21,0.2);
+            margin-bottom: 12px;
+            line-height: 1.2;
         }
 
-        .masthead-title::after {
-            content: 'SHADOWWHISPER';
-            position: absolute;
-            inset: 0;
-            background: linear-gradient(135deg, #c084fc, #a855f7, #7c3aed, #4B0082);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-            filter: blur(12px);
-            opacity: .4;
-        }
-
-        /* Separator */
         .news-separator {
             display: flex;
             align-items: center;
             justify-content: center;
             gap: 8px;
-            margin: 10px 0;
+            margin: 12px 0;
         }
 
         .sep-line {
             flex: 1;
             height: 1px;
-            background: linear-gradient(90deg, transparent, var(--border), transparent);
+            background: linear-gradient(90deg, transparent, var(--primary), transparent);
+            opacity: 0.3;
         }
 
-        .news-separator i { color: var(--accent); font-size: 6px; }
+        .news-separator i {
+            color: var(--primary);
+            font-size: 6px;
+            opacity: 0.5;
+            animation: sepSpin 6s linear infinite;
+        }
 
-        /* Brand tagline */
+        .news-separator i:nth-child(3) {
+            animation-delay: -2s;
+        }
+        .news-separator i:nth-child(5) {
+            animation-delay: -4s;
+        }
+
+        @keyframes sepSpin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
         .brand-tagline {
-            font-size: 11px;
-            letter-spacing: 2px;
-            text-transform: uppercase;
+            font-family: 'Playfair Display', serif;
+            font-size: 14px;
+            font-style: italic;
             color: var(--text-muted);
-            display: flex;
+            letter-spacing: 1px;
+            display: inline-flex;
             align-items: center;
-            justify-content: center;
-            gap: 6px;
+            gap: 2px;
         }
 
+        /* ===== TYPEWRITER CURSOR ===== */
         .typewriter-cursor {
             display: inline-block;
             width: 2px;
-            height: 12px;
-            background: var(--accent-light);
-            animation: cursorBlink .9s step-end infinite;
+            height: 16px;
+            background: var(--primary);
+            margin-left: 3px;
+            animation: cursorBlink 0.8s step-end infinite;
             vertical-align: middle;
         }
 
         @keyframes cursorBlink {
             0%, 100% { opacity: 1; }
-            50%       { opacity: 0; }
+            50% { opacity: 0; }
         }
 
-        /* ─── BODY ───────────────────────────────────────────── */
+        /* ===== BODY ===== */
         .login-body {
-            padding: 24px 32px 28px;
+            padding: 28px 32px 24px;
         }
 
-        /* Headline deco */
         .headline-deco {
+            text-align: center;
+            font-family: 'Playfair Display', serif;
+            font-size: 15px;
+            font-weight: 700;
+            color: var(--primary);
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            margin-bottom: 24px;
             display: flex;
             align-items: center;
             justify-content: center;
             gap: 10px;
-            font-size: 11px;
-            letter-spacing: 2.5px;
-            text-transform: uppercase;
-            color: var(--accent-light);
-            margin-bottom: 24px;
-            padding-bottom: 14px;
-            border-bottom: 1px solid var(--border-dim);
         }
 
-        .headline-deco i { font-size: 9px; opacity: .7; }
+        .headline-deco i {
+            font-size: 12px;
+            animation: penWrite 2s ease-in-out infinite;
+        }
 
-        /* ─── FORM INPUTS ─────────────────────────────────────── */
+        @keyframes penWrite {
+            0%, 100% { transform: rotate(0deg) translateY(0); }
+            25% { transform: rotate(-15deg) translateY(-2px); }
+            75% { transform: rotate(10deg) translateY(1px); }
+        }
+
+        /* ===== FORM GROUPS ===== */
         .input-group-animated {
-            margin-bottom: 18px;
-            animation: inputSlide .5s ease both;
+            margin-bottom: 20px;
+            animation: inputSlideIn 0.6s ease-out forwards;
+            opacity: 0;
         }
 
-        .input-group-animated:nth-child(1) { animation-delay: .05s; }
-        .input-group-animated:nth-child(2) { animation-delay: .10s; }
-        .input-group-animated:nth-child(3) { animation-delay: .15s; }
-        .input-group-animated:nth-child(4) { animation-delay: .20s; }
+        .input-group-animated:nth-child(1) { animation-delay: 0.3s; }
+        .input-group-animated:nth-child(2) { animation-delay: 0.45s; }
+        .input-group-animated:nth-child(3) { animation-delay: 0.6s; }
+        .input-group-animated:nth-child(4) { animation-delay: 0.75s; }
 
-        @keyframes inputSlide {
-            from { opacity: 0; transform: translateX(-12px); }
-            to   { opacity: 1; transform: translateX(0); }
+        @keyframes inputSlideIn {
+            0% {
+                opacity: 0;
+                transform: translateX(-20px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateX(0);
+            }
         }
 
         .login-label {
             display: flex;
             align-items: center;
-            gap: 7px;
+            gap: 6px;
             font-size: 11px;
-            letter-spacing: 1.5px;
+            font-weight: 600;
+            color: var(--primary);
             text-transform: uppercase;
-            color: var(--text-muted);
-            margin-bottom: 7px;
+            letter-spacing: 1.5px;
+            margin-bottom: 8px;
+            font-family: 'Lora', serif;
         }
 
-        .login-label i { color: var(--accent-light); font-size: 12px; }
+        .login-label i {
+            font-size: 13px;
+        }
 
         .input-icon-wrap {
             position: relative;
@@ -749,75 +841,87 @@
 
         .input-icon-wrap > i:first-child {
             position: absolute;
-            left: 13px;
-            color: var(--accent);
-            font-size: 15px;
+            left: 14px;
+            font-size: 16px;
+            color: rgba(250,204,21,0.4);
+            transition: color 0.3s, transform 0.3s;
             z-index: 2;
-            transition: color .2s;
+        }
+
+        .input-icon-wrap:focus-within > i:first-child {
+            color: var(--primary);
+            transform: scale(1.15);
         }
 
         .login-input {
             width: 100%;
-            background: rgba(255,255,255,.03);
-            border: 1px solid var(--border-dim);
-            border-radius: var(--radius-sm);
+            padding: 14px 48px 14px 44px;
+            background: var(--input-bg);
+            border: 1px solid var(--input-border);
+            border-radius: 10px;
             color: var(--text);
             font-size: 14px;
-            padding: 11px 42px 11px 40px;
+            font-family: 'Lora', serif;
+            transition: all 0.3s ease;
             outline: none;
-            transition: border-color .25s, box-shadow .25s, background .25s;
-            letter-spacing: .3px;
         }
 
-        .login-input::placeholder { color: var(--text-dim); }
+        .login-input::placeholder {
+            color: rgba(255,255,255,0.25);
+            font-style: italic;
+        }
 
         .login-input:focus {
-            border-color: var(--accent);
-            background: rgba(75,0,130,.07);
-            box-shadow: 0 0 0 3px rgba(75,0,130,.18), 0 0 20px rgba(75,0,130,.1);
+            border-color: var(--primary);
+            background: rgba(250,204,21,0.05);
+            box-shadow:
+                0 0 0 3px rgba(250,204,21,0.1),
+                0 0 20px rgba(250,204,21,0.05);
         }
 
-        .login-input:focus + .input-icon-wrap > i,
-        .input-icon-wrap:focus-within > i:first-child {
-            color: var(--accent-light);
+        /* ===== INK WRITING ANIMATION ON FOCUS ===== */
+        .login-input:focus {
+            animation: inkFocus 0.4s ease-out;
         }
 
-        .login-input.is-invalid {
-            border-color: var(--danger) !important;
-            box-shadow: 0 0 0 3px rgba(192,57,43,.15) !important;
+        @keyframes inkFocus {
+            0% { box-shadow: 0 0 0 0 rgba(250,204,21,0.4); }
+            50% { box-shadow: 0 0 0 6px rgba(250,204,21,0.15); }
+            100% { box-shadow: 0 0 0 3px rgba(250,204,21,0.1); }
+        }
+
+        .password-toggle {
+            position: absolute;
+            right: 14px;
+            background: none;
+            border: none;
+            color: rgba(250,204,21,0.4);
+            cursor: pointer;
+            font-size: 16px;
+            transition: color 0.3s, transform 0.3s;
+            z-index: 2;
+            padding: 4px;
+        }
+
+        .password-toggle:hover {
+            color: var(--primary);
+            transform: scale(1.15);
         }
 
         .invalid-feedback {
             display: block;
-            font-size: 11px;
-            color: #e74c3c;
-            margin-top: 5px;
+            color: #ff6b6b;
+            font-size: 12px;
+            margin-top: 6px;
             padding-left: 4px;
-            letter-spacing: .3px;
         }
 
-        /* Password toggle */
-        .password-toggle {
-            position: absolute;
-            right: 11px;
-            background: none;
-            border: none;
-            color: var(--text-dim);
-            cursor: pointer;
-            font-size: 15px;
-            padding: 4px;
-            transition: color .2s;
-            z-index: 2;
-        }
-
-        .password-toggle:hover { color: var(--accent-light); }
-
-        /* ─── DIVIDER ─────────────────────────────────────────── */
+        /* ===== DIVIDER ===== */
         .divider {
             display: flex;
             align-items: center;
+            margin: 24px 0 4px;
             gap: 12px;
-            margin: 20px 0;
         }
 
         .divider::before,
@@ -825,45 +929,53 @@
             content: '';
             flex: 1;
             height: 1px;
-            background: linear-gradient(90deg, transparent, var(--border), transparent);
+            background: linear-gradient(90deg, transparent, rgba(250,204,21,0.2), transparent);
         }
 
         .divider span {
             font-size: 10px;
-            letter-spacing: 2px;
+            color: var(--text-muted);
             text-transform: uppercase;
-            color: var(--text-dim);
+            letter-spacing: 2px;
+            font-family: 'Playfair Display', serif;
+            white-space: nowrap;
             display: flex;
             align-items: center;
             gap: 6px;
-            white-space: nowrap;
         }
 
-        .divider i { color: var(--accent); }
+        .divider span i {
+            color: var(--primary);
+        }
 
-        /* ─── BUTTON ──────────────────────────────────────────── */
-        .btn-wrap { display: flex; flex-direction: column; gap: 14px; }
+        /* ===== BUTTON ===== */
+        .btn-wrap {
+            margin-top: 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
 
         .login-btn {
             width: 100%;
-            padding: 13px 24px;
-            background: linear-gradient(135deg, var(--accent) 0%, #6a00b8 60%, #3d006b 100%);
-            border: 1px solid rgba(106,0,184,.4);
-            border-radius: var(--radius-sm);
-            color: var(--white);
-            font-size: 13px;
+            padding: 15px 24px;
+            background: linear-gradient(135deg, var(--primary), #d4a90a);
+            color: #000;
+            border: none;
+            border-radius: 10px;
+            font-size: 15px;
             font-weight: 700;
-            letter-spacing: 2px;
+            font-family: 'Playfair Display', serif;
+            letter-spacing: 1.5px;
             text-transform: uppercase;
             cursor: pointer;
+            transition: all 0.4s cubic-bezier(0.22, 1, 0.36, 1);
             display: flex;
             align-items: center;
             justify-content: center;
-            gap: 9px;
+            gap: 10px;
             position: relative;
             overflow: hidden;
-            transition: transform .18s, box-shadow .25s;
-            box-shadow: 0 4px 20px rgba(75,0,130,.4), 0 0 0 1px rgba(106,0,184,.2);
         }
 
         .login-btn::before {
@@ -871,183 +983,214 @@
             position: absolute;
             top: 0; left: -100%;
             width: 100%; height: 100%;
-            background: linear-gradient(90deg, transparent, rgba(255,255,255,.12), transparent);
-            transition: left .4s ease;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.25), transparent);
+            transition: left 0.6s ease;
         }
 
-        .login-btn:hover::before { left: 100%; }
+        .login-btn:hover::before {
+            left: 100%;
+        }
+
         .login-btn:hover {
             transform: translateY(-2px);
-            box-shadow: 0 8px 32px rgba(75,0,130,.6), 0 0 0 1px rgba(106,0,184,.4);
+            box-shadow:
+                0 8px 30px rgba(250,204,21,0.35),
+                0 0 60px rgba(250,204,21,0.15);
         }
 
-        .login-btn:active { transform: translateY(0); }
+        .login-btn:active {
+            transform: translateY(0) scale(0.98);
+        }
 
-        /* Ripple */
-        .login-btn .ripple {
+        /* ===== QUILL TRAIL on button hover ===== */
+        .login-btn::after {
+            content: '\F4C9';
+            font-family: 'bootstrap-icons';
             position: absolute;
-            border-radius: 50%;
-            background: rgba(255,255,255,.2);
-            transform: scale(0);
-            animation: rippleAnim .6s linear;
-            pointer-events: none;
+            right: 20px;
+            font-size: 16px;
+            opacity: 0;
+            transform: translateX(-10px) rotate(-30deg);
+            transition: all 0.4s ease;
         }
 
-        @keyframes rippleAnim {
-            to { transform: scale(4); opacity: 0; }
+        .login-btn:hover::after {
+            opacity: 0.5;
+            transform: translateX(0) rotate(0deg);
         }
 
-        /* ─── LINKS ───────────────────────────────────────────── */
         .login-link {
+            color: var(--text-muted);
+            text-decoration: none;
+            font-size: 13px;
             display: inline-flex;
             align-items: center;
             gap: 6px;
-            font-size: 12px;
-            color: var(--text-muted);
-            text-decoration: none;
-            letter-spacing: .5px;
-            transition: color .2s;
-            justify-content: center;
-            width: 100%;
+            transition: all 0.3s;
+            font-family: 'Lora', serif;
         }
 
-        .login-link i { color: var(--accent); font-size: 13px; transition: color .2s; }
-        .login-link:hover { color: var(--accent-light); }
-        .login-link:hover i { color: var(--accent-light); }
+        .login-link:hover {
+            color: var(--primary);
+            text-shadow: 0 0 15px rgba(250,204,21,0.3);
+        }
 
-        /* ─── FOOTER ──────────────────────────────────────────── */
+        .login-link i {
+            transition: transform 0.3s;
+        }
+
+        .login-link:hover i {
+            transform: translateX(3px);
+        }
+
+        /* ===== FOOTER ===== */
         .card-footer-stamp {
-            padding: 14px 32px;
-            border-top: 1px solid var(--border-dim);
-            background: rgba(75,0,130,.04);
+            padding: 16px 32px;
             text-align: center;
+            border-top: 1px solid rgba(250,204,21,0.08);
+            background: rgba(250,204,21,0.02);
         }
 
         .footer-text {
-            font-size: 10px;
-            letter-spacing: 2px;
+            font-size: 11px;
+            color: var(--text-muted);
+            letter-spacing: 1.5px;
             text-transform: uppercase;
-            color: var(--text-dim);
+            font-family: 'Playfair Display', serif;
             display: flex;
             align-items: center;
             justify-content: center;
             gap: 8px;
         }
 
-        .footer-text i { color: var(--accent); animation: heartBeat 2.5s ease-in-out infinite; }
+        .footer-text i {
+            color: var(--primary);
+            font-size: 10px;
+            animation: heartBeat 2s ease-in-out infinite;
+        }
 
         @keyframes heartBeat {
-            0%, 100% { transform: scale(1);   }
-            14%       { transform: scale(1.3); }
-            28%       { transform: scale(1);   }
-            42%       { transform: scale(1.2); }
-            56%       { transform: scale(1);   }
+            0%, 100% { transform: scale(1); }
+            15% { transform: scale(1.25); }
+            30% { transform: scale(1); }
+            45% { transform: scale(1.15); }
+            60% { transform: scale(1); }
         }
 
-        /* ─── CONFESSION TICKER ───────────────────────────────── */
-        .confession-ticker {
-            position: fixed;
-            bottom: 0; left: 0; right: 0;
-            height: 34px;
-            background: rgba(13,13,13,.92);
-            border-top: 1px solid var(--border-dim);
-            display: flex;
-            align-items: center;
-            overflow: hidden;
-            z-index: 20;
-            backdrop-filter: blur(8px);
+        /* ===== STORY PAGE TURN EFFECT ===== */
+        .login-card {
+            position: relative;
         }
 
-        .ticker-label {
-            background: var(--accent);
-            height: 100%;
-            display: flex;
-            align-items: center;
-            padding: 0 14px;
-            font-size: 10px;
-            font-weight: 700;
-            letter-spacing: 2px;
-            text-transform: uppercase;
-            white-space: nowrap;
-            flex-shrink: 0;
-            gap: 6px;
-        }
-
-        .ticker-label i { font-size: 11px; animation: pulseDot 1.8s infinite; }
-
-        .ticker-track {
-            display: flex;
-            align-items: center;
-            gap: 0;
-            white-space: nowrap;
-            animation: tickerScroll 40s linear infinite;
-        }
-
-        @keyframes tickerScroll {
-            0%   { transform: translateX(0); }
-            100% { transform: translateX(-50%); }
-        }
-
-        .ticker-item {
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-            font-size: 11px;
-            color: var(--text-muted);
-            padding: 0 28px;
-            letter-spacing: .4px;
-        }
-
-        .ticker-item i { color: var(--accent-light); font-size: 10px; }
-        .ticker-dot { color: var(--text-dim); opacity: .4; }
-
-        /* ─── GHOST MASK ANIMATION ────────────────────────────── */
-        .ghost-masks {
-            position: fixed;
-            inset: 0;
-            pointer-events: none;
-            z-index: 2;
-        }
-
-        .mask-icon {
+        .page-curl {
             position: absolute;
-            color: rgba(75,0,130,.12);
-            animation: maskFloat linear infinite;
-            font-size: 20px;
-        }
-
-        @keyframes maskFloat {
-            0%   { opacity: 0; transform: translateY(100vh) rotate(-15deg); }
-            10%  { opacity: 1; }
-            90%  { opacity: .7; }
-            100% { opacity: 0; transform: translateY(-20px) rotate(15deg); }
-        }
-
-        /* ─── SHADOW VEIL (top secret effect) ────────────────── */
-        .veil-overlay {
-            position: fixed;
-            inset: 0;
-            background: radial-gradient(ellipse at center, transparent 35%, rgba(0,0,0,.65) 100%);
-            z-index: 1;
+            bottom: 0;
+            right: 0;
+            width: 40px;
+            height: 40px;
+            background: linear-gradient(135deg, transparent 50%, rgba(250,204,21,0.08) 50%);
+            border-radius: 0 0 16px 0;
             pointer-events: none;
+            transition: all 0.4s ease;
         }
 
-        /* ─── RESPONSIVE ─────────────────────────────────────── */
+        .login-card:hover .page-curl {
+            width: 55px;
+            height: 55px;
+            background: linear-gradient(135deg, transparent 50%, rgba(250,204,21,0.12) 50%);
+        }
+
+        /* ===== RESPONSIVE ===== */
         @media (max-width: 520px) {
-            .login-header   { padding: 22px 20px 16px; }
-            .login-body     { padding: 18px 20px 22px; }
+            body { padding: 20px 12px; }
+
+            .login-header { padding: 24px 20px 16px; }
+            .login-body { padding: 20px 20px 16px; }
             .card-footer-stamp { padding: 12px 20px; }
-            .masthead-title { font-size: 25px; letter-spacing: 3px; }
-            .edition-bar    { flex-direction: column; gap: 4px; text-align: center; }
+
+            .masthead-title { font-size: 26px; letter-spacing: 2px; }
+
+            .edition-bar { font-size: 8px; }
+
+            .header-icon {
+                width: 56px;
+                height: 56px;
+                font-size: 24px;
+            }
+
+            .floating-snippet { font-size: 10px; }
         }
 
-        /* ─── FORM CONTROL OVERRIDE ───────────────────────────── */
-        .form-control { appearance: none; -webkit-appearance: none; }
-        .form-control:-webkit-autofill,
-        .form-control:-webkit-autofill:hover,
-        .form-control:-webkit-autofill:focus {
-            -webkit-text-fill-color: var(--text);
-            -webkit-box-shadow: 0 0 0 1000px rgba(75,0,130,.08) inset;
-            caret-color: var(--text);
+        /* ===== SCROLL INK TRAIL ===== */
+        .ink-drop {
+            position: fixed;
+            width: 4px;
+            height: 4px;
+            background: var(--primary);
+            border-radius: 50%;
+            pointer-events: none;
+            opacity: 0;
+            z-index: 999;
+            animation: inkDrop 1s ease-out forwards;
+        }
+
+        @keyframes inkDrop {
+            0% {
+                transform: scale(0);
+                opacity: 0.6;
+            }
+            50% {
+                transform: scale(2);
+                opacity: 0.3;
+            }
+            100% {
+                transform: scale(3);
+                opacity: 0;
+            }
+        }
+
+        /* ===== FORM HELPERS ===== */
+        .d-flex { display: flex; }
+        .flex-column { flex-direction: column; }
+        .gap-3 { gap: 16px; }
+        .mt-3 { margin-top: 16px; }
+        .text-center { text-align: center; }
+        .is-invalid { border-color: #ff6b6b !important; }
+
+        /* ===== BOOK OPEN ANIMATION ===== */
+        @keyframes bookOpen {
+            0% {
+                clip-path: inset(0 50% 0 50%);
+                opacity: 0;
+            }
+            60% {
+                clip-path: inset(0 5% 0 5%);
+                opacity: 0.8;
+            }
+            100% {
+                clip-path: inset(0 0 0 0);
+                opacity: 1;
+            }
+        }
+
+        .login-body form {
+            animation: bookOpen 1s ease-out 0.5s forwards;
+            opacity: 0;
+        }
+
+        /* ===== STARDUST around card ===== */
+        .stardust {
+            position: absolute;
+            width: 2px;
+            height: 2px;
+            background: var(--primary);
+            border-radius: 50%;
+            pointer-events: none;
+            animation: starFloat 4s ease-in-out infinite;
+        }
+
+        @keyframes starFloat {
+            0%, 100% { opacity: 0; transform: translateY(0) scale(0.5); }
+            50% { opacity: 0.6; transform: translateY(-20px) scale(1); }
         }
     </style>
