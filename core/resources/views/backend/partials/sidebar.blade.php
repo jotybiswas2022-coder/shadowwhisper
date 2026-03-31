@@ -66,21 +66,9 @@ use Illuminate\Support\Str;
         <div class="sidebar">
             <ul class="sidebar-menu">
                 <li>
-                    <a href="/admin/sliders" class="{{ request()->is('admin/sliders') ? 'active' : '' }}">
-                        <i class="bi bi-images"></i>
-                        <span>Sliders</span>
-                    </a>
-                </li>
-                <li>
                     <a href="/admin/posts" class="{{ request()->is('admin/posts') ? 'active' : '' }}">
                         <i class="bi bi-journal-text"></i>
                         <span>Posts</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="/admin/category" class="{{ request()->is('admin/category') ? 'active' : '' }}">
-                        <i class="bi bi-tags"></i>
-                        <span>Categories</span>
                     </a>
                 </li>
                 <li>
